@@ -5,6 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario</title>
+    <style type="text/css">
+        .tab{
+            margin-left: 50px;
+        }
+    </style>
 </head>
 <body>
     <h1>Formularios</h1>
@@ -19,9 +24,28 @@
             <td colspan="2"><input type="text" name="username" id="username" placeholder="Nombre de usuario"></td>
         </tr>
         <tr>
-            <td><input type="password" name="password" id="password" placeholder="Contraseña"></td>
+            <td colspan="2"><input type="password" name="password" id="password" placeholder="Contraseña"></td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="email" name="Mail" id="Mail" placeholder="Correo Electronico"></td>
+        </tr>
+        <tr>
+            <td><input type="radio" valio="Masculino" name="gender" id="gender">Masculino</td>
+            <td><input type="radio" valio="Femenino" name="gender" id="gender">Femenino</td>
         </tr>
     </table>
+
+            Edad:
+            <br>
+            <input type="radio" value="0" name="age" id="age" class="tab">Menor de 18 años
+            <br>
+            <input type="radio" value="1" name="age" id="age" class="tab">De 19 a 39 años
+            <br>
+            <input type="radio" value="2" name="age" id="age" class="tab">40 a 59 años
+            <br>
+            <input type="radio" value="3" name="age" id="age" class="tab">60 o más años
+            <br>
+
     <input type="submit" value="Enviar información"/>
     <input type="reset" value="Reiniciar información">
     </form>
