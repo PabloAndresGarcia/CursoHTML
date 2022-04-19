@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>If Else</title>
+</head>
+<body>
+    <h1>If Else</h1>
+    <script lang="javascript" type="text/javascript">
+        var highscore = 2000;
+        var currentscore = 2500;
+
+        if (currentscore>highscore)
+        {
+            highscore = currentscore ;
+            document.write ("Enhorabuena! Has conseguido un nuevo record");
+        } else {
+            document.write("Buen intento, pero no has superado tu record");
+        }
+
+        var examscore =1;
+        var finalscore;
+
+        if (examscore<0){
+            finalscore = "No puedes tener una nota tan baja"
+        }
+          else if (examscore<5){
+            finalscore = "suspendido";
+        } else if(examscore<7) {
+            finalscore = "aprobado";
+        } else if (examscore<9){
+            finalscore = "Notable"
+        } else if (examscore<10){
+            finalscore = "excelente"
+        } else if (examscore<10.01){
+            finalscore = "Matricula de Honor"
+        } else if (examscore>10){
+            finalscore = "no puedes tener una nota tan alta."
+        }
+        
+        document.write("<p>La nota del estudiante es un "+examscore+ " y por lo tanto le pondremos: "+finalscore +"</p>");
+    </script>
+
+
+</body>
+</html>
