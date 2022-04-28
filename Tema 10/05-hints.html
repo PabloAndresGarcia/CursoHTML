@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de inversión</title>
+</head>
+<body>
+    <h1>Tipo de interés</h1>
+    <script lang="javascript" type="text/javascript">
+        var pi=parseFloat("3.14159265")
+        var five=parseInt("5")
+        var three=Math.round(pi)
+ 
+        /*
+        Pida al usuario una tasa de interés introducida con decimales
+        Interés i=0.05 -> 5%
+        ¿Cuánto dinero quiere ingresar?
+        d=1000€
+        Tiempo que quiere tener el dinero invertido en meses
+        t=6
+        
+        Crearemos una lista que muestre al usuario mes a mes cúanto dinero tiene y el total
+        Interés acumulado =d*i
+        Dinero total=d+d*i
+        */
+ 
+        var i=parseFloat(prompt("Inserte el tipo de interés que desea en tanto por uno (ej. 5% -> 0.05)"));
+        var d=parseInt(prompt("Inserte el dinero que quiere invertir"))
+        var t=parseInt(prompt("Inserte el tiempo que desea realizar su inversión"));
+        var ia;
+        var da;
+        var di=d;//Inersión inicialº
+ 
+        if(i==null || d==null || t==null || isNaN(i) ||isNaN(d) || isNaN(t)){
+            i=0.05;
+            d=1000;
+            t=12;
+            di=1000;
+ 
+            //Indicamos que al introducir un dato erróneo se calculará con datos preestablecidos
+            document.write("<strong>Debido a que uno de los parámetros no se ha insertado correctamente procedemos a calcularlo con con los valores preestablecidos</strong>")
+ 
+            document.write("<p>Con un capital inicial de <b>"+d+"€</b> a un interés del <b>"
+            +i*100+"%</b> podrás obetener durante los próximos <b>"+t+"</b> meses, los siguientes intereses mensuales.</p>")
+ 
+            document.write("<table>")
+            document.write("<tr><th>Mes</th><th>Interés acumulado</th><th>Total</th></tr>")
+            
+            for(var idx=1;idx<=t;idx++){
+                d=d+i*d;
+                document.write("<tr><td>"+idx+"</td><td>"+Math.round((d-di))+"€</td><td>"+Math.round(d)+"€</td></tr>")
+            }
+            document.write("</table>")
+        }
+        else{
+            document.write("<p>Con un capital inicial de <b>"+d+"€</b> a un interés del "+i*100+"% podrás obetener durante los próximos <b>"
+            +t+"</b> meses, los siguientes intereses mensuales.</p>")
+ 
+            document.write("<table>")
+            document.write("<tr><th>Mes</th><th>Interés acumulado</th><th>Total</th></tr>")
+            
+            for(var idx=1;idx<=t;idx++){
+                d=d+i*d;
+                document.write("<tr><td>"+idx+"</td><td>"+Math.round((d-di))+"€</            td><td>"+Math.round(d)+"€</td></tr>")
+                }
+            document.write("</table>")
+        }
+    </script>
+    
+</body>
+</html>
