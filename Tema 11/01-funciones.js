@@ -27,6 +27,6 @@ function displayPlayerScore(thePlayerScore)
 function addTwoNumbers (x, y)
 {
     var addition = x + y;
-    document.write("<b>" + addition + "</b>");
+    document.write("<b>" + addition + "</b><br/>");
     return(addition);
 }
