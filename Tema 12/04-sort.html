@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1></h1>
+    <script lang="javascript" type="text/javascript">
+        var names = ["Gauss", "Laplace", "Fouries", "Ruffini", "Aristoteles", "Pitagoras", "Godel", "Riemann", "Euclides", "Descartes", "Lesbegue"]
+
+        names.sort();
+        for (x in names)
+        {
+            document.write(names [x] + "<Br/>")
+        }
+            document.write("==================================================" + "<br/>")
+        //array.splice (Indice del primer elemento a ser eliminado, numero de elementos a ser eliminados);
+
+        names.splice(3,4);
+        for (x in names)
+        {
+            document.write(names [x] + "<Br/>")
+        }
+
+    </script>
+</body>
+</html>
