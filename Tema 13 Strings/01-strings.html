@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script lang="javascript" type="text/javascript">
+        var message = "Hola mundo!";
+        var l = message.length;
+        document.write("El string '"+message+"' tiene "+ l + " caracteres."+"<br/>");
+
+
+        var phrase = "Si tu no luchas por tus sueños, alguien te pagará para que luches por los suyos.";
+        document.write(phrase)
+        document.write ("<br/> La frase de Steve Jobs tiene longitud: " + phrase.length + "<br/>");
+
+
+        for ( var i = 0; i < phrase.length; i++)
+        {
+            document.write(i + ": "+phrase.charAt(i)+ "<br/>");
+        }
+
+
+        document.write("La primera letra 's' aparece en: " + phrase.indexOf("s") + "<br/>");
+        document.write("La primera letra 'm' aparece en: " + phrase.indexOf("m") + "<br/>");
+
+        var minID = Math.min(phrase.indexOf("a"), 
+                             phrase.indexOf("e"), 
+                             phrase.indexOf("i"), 
+                             phrase.indexOf("o"), 
+                             phrase.indexOf("u")
+                                );
+        document.write("La primera vocal aparece en : " +  minID);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script lang="javascript" type="text/javascript">
+
+        var phrase = "Si tu no luchas por tus sueños, alguien te pagará para que luches por los suyos.";
+
+        var newPhrase = phrase.replace ("sueños", "pokemons");
+
+        document.write (newPhrase);
+
+
+        var names = "Pablo, Julian, Marco, Facu, Mei, Santi, Prono, Guille, Hernan, Sabri, Ema";
+
+        var moreNames = names.split (", ");
+        for(x in moreNames)
+        {
+            document.write(moreNames[x] + "<br/>");
+        }
+
+
+        var correo= "     garciasjs@gmail.com     "
+        document.write("'"+correo.trim()+"'");
+
+    </script>
+</body>
+</html>
