@@ -5,17 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script lang="javascript" type="text/javascript">
+        function processData(){
+            var firstname;
+            var lastname;
+
+            firstname = document.getElementById("firstname").value;
+            lastname = document.getElementById("lastname").value;
+
+            alert("Bienvenido " + firstname + " " + lastname);
+        }
+    </script>
 </head>
 <body>
     
+    <h1>Formulario con Inner HTML asociado</h1>
+    <p>escribe tus nombres y tu apellido para entrar a la fiesta</p>
+    Nombre: <input type="text" id="firstname"/>
+    <br/>
+    Apellidos: <input type="text" id="lastname"/>
+    <br/>
+    <input type="button" value="Enviar datos" onclick="processData()">
     
-    
-    
-    <script lang="javascript" type="text/javascript">
-
-
-
-    </script>
 
 </body>
 </html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/css">
+    #prueba {
+        color:green 
+    }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <h1>Prueba de HTML interno</h1>
+    <p id="my-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est earum exercitationem corrupti voluptatem minus commodi praesentium veritatis, laborum error velit, unde natus nostrum id repellat odit officia impedit iure nihil?</p>
+
+    <div id="prueba">asdfasdfas</div>
+
+    <script lang="javascript" type="text/javascript">
+        
+        var myDiv = document.getElementById("prueba");
+        myDiv.style.color = "#FFFFFF";
+        myDiv.style.backgroundColor = "#4020AA"
+        myDiv.style.fontFamily = "Verdana"
+        alert (myDiv.innerHTML);
+        myDiv.innerHTML = "Este texto lo hemos generado a traves de Javascript";
+        document.getElementById("my-paragraph").innerHTML = "He remplazado el antiguo lorem por este texto";
+    </script>
+</body>
+</html>
