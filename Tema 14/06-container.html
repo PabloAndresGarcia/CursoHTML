@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content e Inner HTML</title>
+    <script lang="javascript" type="text/javascript">
+        function changeInnerHtml()
+        {
+            document.getElementById("content").innerHTML = "<h2>Nuevo contenido<h/><p>El contenido ha cambiado, ¿verdad?</p>";
+        }
+    </script>
+</head>
+<body>
+    <div id="content">
+        <h1>Magnifico ejemplo final de JS, HTML, CSS</h1>
+            <p>Este es un parrafo de ejemplo. Sera cambiado usando inter HTML cuando accedamos a el</p>
+
+        <input type="button" value="Pulsame y veras!" onclick="changeInnerHtml()"/>
+
+    </div>
+    <script lang="javascript" type="text/javascript">
+
+    </script>
+</body>
+</html>

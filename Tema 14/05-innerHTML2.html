@@ -14,6 +14,8 @@
             lastname = document.getElementById("lastname").value;
 
             alert("Bienvenido " + firstname + " " + lastname);
+            document.getElementById("parr").style.backgroundColor = "#88DDDD";
+            document.getElementById("parr").style.fontWeight = "bold";
         }
     </script>
 </head>
@@ -26,6 +28,8 @@
     Apellidos: <input type="text" id="lastname"/>
     <br/>
     <input type="button" value="Enviar datos" onclick="processData()">
+    <br/>
+    <p id="parr">Este es un párrafo especial para los que se apuntan a la fiesta</p>
     
 
 </body>
