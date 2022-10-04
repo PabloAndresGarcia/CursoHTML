@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+ 
+    <style type="text/css">
+    html{
+    height: 100%;
+    }
+    body{
+        margin: 0 auto;
+        font-family: Georgia;
+        background-image: linear-gradient(to bottom right,#77A1D3,#79CBCA, #E684AE);
+        background-repeat: no-repeat;
+    }
+    h1{
+        font-size: 240%;
+    }
+    h1, footer{
+        color: #090446;
+        text-align: center;
+        /*color: white;*/
+    }
+    #divForm{
+        width: 24%;
+        margin: 0 auto;
+        font-size: 140%;
+        /*background-image: linear-gradient(to bottom left,#77A1D3,#79CBCA, #E684AE);*/
+        background-color: white;
+        border-radius: 10px;
+        padding: 2%;
+    }
+    #buttonSubmit, #buttonReset{
+        background-color: #77A1D3;
+        color: white;
+    }
+    #buttonSubmit{
+        width: 100%;
+    }
+    td{
+        color: rgba(0, 0, 0, 0.813);
+    }
+    input{
+        border-radius: 4px;
+        width: 100%;
+        font-family: Georgia sans-serif;
+        padding-left: 2%;
+        color: rgba(0, 0, 0, 0.713);      
+    }
+    #divForm p{
+        font-size: 0.8em;
+        font-family: Georgia sans-serif;
+    }
+    </style>
+ 
+    <script lang="javascript" type="text/javascript">
+        function checkForm(checkField){
+ 
+            if(checkField=="userName"){
+                var userName=document.getElementById("userName");
+            
+                if(userName.value.length<3){
+                    userName.style.borderColor="red";
+                    var alertName=document.getElementById("spanName");
+                    alertName.innerHTML="El nombre tiene que tener 3 caracteres mínimo.";
+                    alertName.style.fontSize="8pt";
+                    document.getElementById("spanSubmitName").innerHTML="";
+                    userName.value="";
+                }
+                else{
+                    userName.style.borderColor="lightgrey";
+                    var alertName=document.getElementById("spanName");
+                    alertName.innerHTML="";
+                    document.getElementById("spanSubmitName").innerHTML="<p>El nombre del usuario es: "+userName.value+" </p>";
+                } 
+            }// ============ Fin checkName()
+            else if(checkField=="userLastName"){
+                var userLastName=document.getElementById("userLastName");
+                
+                if(userLastName.value.length<3){
+                    userLastName.style.borderColor="red";
+                    var alertLastName=document.getElementById("spanLastName");
+                    alertLastName.innerHTML="El apellido tiene que tener 3 caracteres mínimo.";
+                    alertLastName.style.fontSize="8pt";
+                    document.getElementById("spanSubmitLastName").innerHTML="";
+                    userLastName.value="";
+                }
+                else{
+                    userLastName.style.borderColor="lightgrey";
+                    var alertLastName=document.getElementById("spanLastName");
+                    alertLastName.innerHTML="";
+                    document.getElementById("spanSubmitLastName").innerHTML="<p>El apellido del usuario es: "+userLastName.value+" </p>";
+                }
+            }// ============ Fin checkLastName()
+            else if(checkField=="userEmail"){
+                var userEmail=document.getElementById("userEmail");
+                var pattern=/[@.]/g;
+                var checkPattern=userEmail.value.match(pattern)
+                
+                
+                if(userEmail.value.length<3 || checkPattern==null || checkPattern.length==1){
+                    userEmail.style.borderColor="red";
+                    var alertEmail=document.getElementById("spanEmail");
+                    alertEmail.innerHTML="Formato de email no válido";
+                    alertEmail.style.fontSize="8pt";
+                    document.getElementById("spanSubmitEmail").innerHTML="";
+                    userEmail="";
+                }
+                else{
+                    userEmail.style.borderColor="lightgrey";
+                    var alertEmail=document.getElementById("spanEmail");
+                    alertEmail.innerHTML="";
+                    document.getElementById("spanSubmitEmail").innerHTML="<p>El email del usuario es: "+userEmail.value+" </p>";
+                }
+            }// ============ Fin checkEmail()
+            else if(checkField=="userPhone"){
+                var userPhone=document.getElementById("userPhone");
+                
+                if(userPhone.value.length!=9){
+                    userPhone.style.borderColor="red";
+                    var alertPhone=document.getElementById("spanPhone");
+                    alertPhone.innerHTML="Número de teléfono incorrecto.";
+                    alertPhone.style.fontSize="8pt";
+                    document.getElementById("spanSubmitPhone").innerHTML="";
+                    userPhone="";
+                }
+                else{
+                    userPhone.style.borderColor="lightgrey";
+                    var alertPhone=document.getElementById("spanPhone");
+                    alertPhone.innerHTML="";
+                    document.getElementById("spanSubmitPhone").innerHTML="<p>El teléfono del usuario es: "+userPhone.value+" </p>";
+                } 
+            }// ============ Fin checkPhone()
+ 
+        }// ============= Fin checkSubmit()
+    </script>
+ 
+</head>
+<body>
+    <div id="container">
+        <h1>Formulario de inscripción</h1>
+        <div id="divForm">
+            <form action="parte-2.html" method="POST">
+                <table>
+                    <tr>
+                        <td>Nombre</td>
+                        <td><input type="text" id="userName" onblur="checkForm('userName')" required></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td id="spanName"></td>
+                    </tr>
+                    <tr>
+                        <td>Apellido</td>
+                        <td><input type="text" id="userLastName" onblur="checkForm('userLastName')" required></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td id="spanLastName"></td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td><input type="email" id="userEmail" onblur="checkForm('userEmail')" required></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td id="spanEmail"></td>
+                    </tr>
+                    <tr>
+                        <td>Teléfono</td>
+                        <td><input type="number" id="userPhone" onblur="checkForm('userPhone')" required></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td id="spanPhone"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="reset" id="buttonReset"></td>
+                        <td><input type="submit" id="buttonSubmit"> </td>
+                    </tr>
+                </table>
+            </form>
+            
+            <div id="outputData">
+                <p id="spanSubmitName"></p>
+                <p id="spanSubmitLastName"></p>
+                <p id="spanSubmitEmail"></p>
+                <p id="spanSubmitPhone"></p>
+            </div><!-- Fin outputData -->
+                 
+        </div><!-- Fin Div Form -->
+ 
+        <div id="divFooter">
+            <footer>
+                <p>Pablo García | Desarrollador WEB</p>
+            </footer>
+        </div><!-- Fin Div Footer -->
+        
+    </div><!-- Fin Div Container -->
+</body>
+</html>
